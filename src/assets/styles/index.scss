@@ -1,0 +1,159 @@
+@import "./../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+:root {
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.813rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.25rem;
+    --fs-xl: 1.5rem;
+}
+
+.light-theme {
+    --base-color: #f3f3f3; // navy-blue
+    --base-light: #f8f8f8; // white-light
+    --base-invert: #000b2b;
+    --bg-max: #ffffff;
+    --text-color: #000000;
+    --text-dim: #9a9ab5; // same
+    --backdrop: #ffffff80;
+
+    --border-primary: #DCD2F9;
+    --border-default: #ABABAB;
+
+    --primary-purple: #8e69ee; //546ae4
+
+
+    --nav-icon-bg: #9a9ab5; // same
+    --nav-text-color: #9a9ab5;
+
+    --green-dark: #36c4a3;
+    --green-light: #edf9f6;
+    --orange-dark: #f1a12c;
+    --orange-light: #fff2e7;
+    --purple-dark: #d043ff;
+    --purple-light: #f8e2ff;
+    --red-dark: #ff6b69;
+    --red-light: #ffe5e5;
+    --blue-dark: #546ae4;
+    --blue-light: #e0e4fb;
+    --modal-backdrop: #e0e4fb3d;
+    // --form-border: #E4E4F1;
+    --box-shadow: 0px 0px 5px 0px #f1f1f1;
+    --hover-shadow: 0px 0px 10px 1px #eaeaea;
+    --transition-all-02s: all 0.2s ease-in-out;
+    --color-filter: brightness(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.dark-theme {
+    --base-color: #000b2b; //navy-blue
+    --base-light: #010e34; // navy-light
+    --base-invert: #f3f3f3;
+    --bg-max: #000000;
+    --text-color: #ffffff;
+    --text-dim: #9a9ab5; // same
+    --backdrop: #00000080;
+    
+    --border-primary: #66619B;
+    --border-default: #4B5177;
+
+
+    --primary-purple: #B59BFA; //546ae4
+    --nav-icon-bg: #9a9ab5; // same
+    --nav-text-color: #9a9ab5;
+
+    --green-dark: #36c4a3;
+    --green-light: #edf9f6;
+    --orange-dark: #f1a12c;
+    --orange-light: #2f261d;
+    --purple-dark: #d043ff;
+    --purple-light: #2c1e35;
+    --red-dark: #ff6b69;
+    --red-light: #3c2323;
+    --blue-dark: #546ae4;
+    --blue-light: #23273a;
+
+    // --form-border: #E4E4F1;
+    --modal-backdrop: #23273a40;
+    --box-shadow: 0px 0px 5px 0px #101010;
+    --hover-shadow: 0px 0px 10px 1px #23273a;
+    --transition-all-02s: all 0.2s ease-in-out;
+    --color-filter: brightness(1);
+
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    /* Font varient */
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    // text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+    color: var(--text-color);
+    background-color: var(--base-color);
+    // transition: var(--transition-all-02s);
+}
+
+.lazy-loader {
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.action-item {
+    .square-btn {
+        outline: 0;
+        border: 0;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        height: 2.5rem;
+    }
+    .toggle-theme {
+        width: 2.5rem;
+        background-color: var(--base-invert);
+    }
+}
+
+.coderatrix-btn {
+    outline: 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 8px 15px;
+    color: var(--text-color);
+    font-size: var(--fs-md);
+    vertical-align: text-bottom;
+    user-select: none;
+    background-color: transparent;
+    &.primary-button {
+        border: 1px solid var(--primary-purple);
+    }
+    &:hover {
+        filter: brightness(0.85);
+        // color: brightness(1);
+    }
+    &:disabled {
+        opacity: 0.75;
+        cursor: not-allowed;
+    }
+    .icon {
+        margin-right: 5px;
+        img {
+            margin-top: -2px;
+        }
+    }
+}

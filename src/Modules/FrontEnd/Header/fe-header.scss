@@ -1,0 +1,60 @@
+#header {
+    // height: 80px;
+    // transition: all 0.5s;
+    z-index: 997;
+    padding: 16px 0;
+    // background: #c8def1;
+}
+
+.active {
+    color: var(--primary-purple);
+}
+
+.coderatrix-menu {
+    display: flex;
+    align-items: center;
+    .menu-item {
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+        &:hover {
+            @extend .active;
+        }
+    }
+    a.active {
+        color: var(--primary-purple);
+    }
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(5deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    60% {
+        transform: rotate(2deg);
+    }
+    70% {
+        transform: rotate(0deg);
+    }
+    80% {
+        transform: rotate(-2deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}

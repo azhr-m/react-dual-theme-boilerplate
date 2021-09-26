@@ -1,0 +1,21 @@
+.footer {
+    background-color: var(--bg-max);
+    // border: 1px solid var(--primary-purple);
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 30px;
+    .f-link-items {
+        .f-link-item {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: .2s;
+            cursor: pointer;
+            &:hover {
+                color: var(--primary-purple);
+            }
+        }
+    }
+    .footer-bottom {
+        border-top: 1px solid var(--border-default);
+    }
+}
